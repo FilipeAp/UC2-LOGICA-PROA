@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de saldo de 1%</title>
+</head>
+<body>
+    <h1>Questão:</h1>
+    <h2>
+        Informar um saldo e imprimir o saldo com reajuste de 1%.
+    </h2>
+    <h1>Programa:</h1>
+    <script>
+
+        let saldo = parseFloat(prompt("Insira seu saldo:"))
+        let novoSaldo = (0.01 * saldo) + saldo;
+
+        document.write(`O saldo original é de: R$ ${saldo.toFixed(2)}`)
+        document.write(`<br />O saldo com o reajuste de 1% é de: R$ ${novoSaldo.toFixed(2)}`)
+
+    </script>
+</body>
+</html>
