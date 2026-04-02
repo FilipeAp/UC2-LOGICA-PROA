@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - Hora de comer</title>
+</head>
+<body>
+    <script>
+
+        let nomeUser = prompt("Digite seu nome:");
+        let convidados = parseInt(prompt("Qual o número de convidados para o evento?"));
+
+        if (isNaN(convidados) || convidados <= 0) {
+            alert("Valor inválido");
+        } else if (convidados > 350) {
+            alert("Quantidade de convidados superior à capacidade máxima.");
+        } else {
+
+            let cafe = convidados * 0.2;
+            let agua = convidados * 0.5;
+            let salgados = convidados * 7;
+
+            let custoCafe = cafe * 0.80;
+            let custoAgua = agua * 0.40;
+            let custoSalgados = (salgados / 100) * 34;
+
+            let custoTotalcomida = custoCafe + custoAgua + custoSalgados;
+
+            alert(`O evento precisará de ${cafe} litros de café, ${agua} litros de água, ${salgados} salgados. O custo total do evento será de R$ ${custoTotalcomida.toFixed(2)}`);
+
+            let confirmUsercomidas = prompt("Gostaria de efetuar a reserva? S/N").toUpperCase();
+
+            if (confirmUsercomidas === "S") {
+                alert(`${nomeUser}, reserva efetuada com sucesso.`);
+            } else {
+                alert(`${nomeUser}, reserva não efetuada.`);
+            }
+        }
+
+    </script>
+</body>
+</html>

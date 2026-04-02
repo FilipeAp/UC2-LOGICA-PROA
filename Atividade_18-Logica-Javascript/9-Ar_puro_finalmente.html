@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 - Ar puro, finalmente</title>
+</head>
+<body>
+
+    <script>
+        let nomeUser = prompt("Digite seu nome:");
+
+        let menorValor = Infinity;
+        let empresaMaisBarata = "";
+
+        let continuar = "S";
+
+        while (continuar === "S") {
+
+            let nomeEmpresa = prompt("Qual o nome da empresa?");
+            let valorAparelho = parseFloat(prompt("Qual o valor por aparelho?"));
+            let qtdAparelhos = parseInt(prompt("Qual a quantidade de aparelhos?"));
+            let percentualDesconto = parseFloat(prompt("Qual a porcentagem de desconto?"));
+            let minimoDesconto = parseInt(prompt("Qual o número mínimo de aparelhos para conseguir o desconto?"));
+
+            let valorTotal = valorAparelho * qtdAparelhos;
+
+            if (qtdAparelhos >= minimoDesconto) {
+                let desconto = valorTotal * (percentualDesconto / 100);
+                valorTotal = valorTotal - desconto;
+            }
+
+            alert(`O serviço de ${nomeEmpresa} custará R$ ${valorTotal.toFixed(2)}`);
+
+            if (valorTotal < menorValor) {
+                menorValor = valorTotal;
+                empresaMaisBarata = nomeEmpresa;
+            }
+
+            continuar = prompt(`Deseja informar novos dados, ${nomeUser}? (S/N)`).toUpperCase();
+        }
+        alert(`O orçamento de menor valor é o de ${empresaMaisBarata} por R$ ${menorValor.toFixed(2)}`);
+    </script>
+
+</body>
+</html>

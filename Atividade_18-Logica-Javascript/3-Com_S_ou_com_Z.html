@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 - Com "S" ou com "Z"?</title>
+</head>
+<body>
+    
+    <script>
+        let hospedes = [];
+        let opcao = 0;
+
+        while (opcao != 3) {
+            opcao = parseInt(prompt("Selecione uma opção:\n1. Cadastrar\n2. Pesquisar\n3. Sair"));
+            if (opcao === 1) {
+                if (hospedes.length >= 15) {
+                    alert("Máximo de cadastros atingido");
+                } else {
+                    let nomeHospede = prompt("Qual o nome do hóspede?");
+                    hospedes.push(nomeHospede);
+                    alert(`Hóspede ${nomeHospede} foi cadastrada(o) com sucesso!`);
+                }
+
+            }else if (opcao === 2) {
+                let nomeBusca = prompt("Qual o nome do hóspede?");
+                let encontrado = false;
+                for (let i = 0; i < hospedes.length; i++) {
+
+                    if (hospedes[i] === nomeBusca) {
+                        encontrado = true;
+                        break;
+                    }
+                }
+
+                if (encontrado) {
+                    alert(`Hóspede ${nomeBusca} foi encontrada(o)!`);
+                } else {
+                    alert(`Hóspede ${nomeBusca} não encontrado(a)`);
+                }
+            }else if (opcao === 3) {
+                alert("Programa encerrado");
+            }else {
+                alert("Opção inválida");
+            }
+        }
+    </script>
+
+</body>
+</html>

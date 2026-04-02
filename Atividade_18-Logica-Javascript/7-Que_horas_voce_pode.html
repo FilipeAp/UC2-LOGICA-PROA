@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - Que horas você pode?</title>
+</head>
+<body>
+    
+    <script>
+        let diaSemana = prompt("Qual o dia do seu evento?");
+        let hora = parseInt(prompt("Qual a hora do seu evento?"));
+
+        if (isNaN(hora) || hora < 0 || hora > 23) {
+            alert("Hora inválida");
+        } else {
+            if (diaSemana === "segunda" || diaSemana === "terca" || diaSemana === "quarta" || diaSemana === "quinta" || diaSemana === "sexta"
+            ) {
+                if (hora >= 7 && hora <= 23) {
+
+                    let empresa = prompt("Qual o nome da empresa?");
+                    alert(`Restaurante reservado para ${empresa}. ${diaSemana} às ${hora}hs.`);
+
+                } else {
+                    alert("Restaurante indisponível");
+                }
+
+            }else if (diaSemana === "sabado" || diaSemana === "domingo") {
+                if (hora >= 7 && hora <= 15) {
+
+                    let empresa = prompt("Qual o nome da empresa?");
+                    alert(`Restaurante reservado para ${empresa}. ${diaSemana} às ${hora}hs.`);
+
+                } else {
+                    alert("Restaurante indisponível");
+                }
+            }
+            else {
+                alert("Dia inválido");
+            }
+        }
+    </script>
+
+</body>
+</html>

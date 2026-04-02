@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 - Festa ou trabalho?</title>
+</head>
+<body>
+    
+    <script>
+        let nomeUser = prompt("Digite seu nome:");
+        let duracaoEvento = parseFloat(prompt("Qual a duração do evento em horas?"));
+
+        if (isNaN(duracaoEvento) || duracaoEvento <= 0) {
+            alert("Valor inválido");
+        } else {
+            let qtdGarcons = parseInt(prompt("Quantos garçons serão necessários?"));
+            if (isNaN(qtdGarcons) || qtdGarcons <= 0) {
+                alert("Valor inválido");
+            } else {
+                let custoGarcomHora = 10.50;
+                let custoTotalgarcon = duracaoEvento * qtdGarcons * custoGarcomHora;
+
+                alert(`Custo total: R$ ${custoTotalgarcon.toFixed(2)}`);
+
+                let confirmUser = prompt("Gostaria de efetuar a reserva? S/N").toUpperCase();
+
+                if (confirmUser === "S") {
+                    alert(`${nomeUser}, reserva efetuada com sucesso.`);
+                } else {
+                    alert(`${nomeUser}, reserva não efetuada.`);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

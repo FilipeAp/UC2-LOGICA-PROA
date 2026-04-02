@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 - Quantos quartos são?</title>
+</head>
+<body>
+    <script>
+        let nomeHotel = prompt ("Digite o nome do hotel:");
+        alert(`O nome do hotel é ${nomeHotel}`);
+        let nomeUser = prompt("Digite seu nome:");
+        let senha = parseInt(prompt("Digite a senha:"));
+
+        while(senha != 2678){
+            senha = parseInt(prompt("Senha incorreta! Tente novamente:"));
+        }
+
+        let valorDiaria = parseFloat(prompt ("Digite o valor da diária do hotel:"));
+            if(isNaN(valorDiaria) || valorDiaria < 0){
+                alert (`Valor Inválido, ${nomeUser}`);
+            }else{
+                let diasHospedagem = parseFloat(prompt ("Digite a quantidade de dias de hospedagem:")) 
+
+                let valorTotal = valorDiaria*diasHospedagem
+                alert(`${nomeUser}, o valor total das hospedagens é: R$${valorTotal.toFixed(2)}`);
+                
+
+                if(isNaN(diasHospedagem) || diasHospedagem < 0 || diasHospedagem > 30){
+                    document.write("Valor Inválido");
+                }else{
+                   nomeHospede = prompt("Digite o nome do hospede:");
+                   let confirmUser = prompt(`${nomeUser}, você confirma essa reserva para o ${nomeHospede} por 10 dias? S/N`).toUpperCase();
+                    if (confirmUser === "S"){
+                        alert(`${nomeUser}, reserva efetuada para ${nomeHospede}. O valor total é de R$${valorTotal.toFixed(2)}`);
+                    }else{
+                        alert(`${nomeUser}, reserva não efetuada`);
+                    }
+
+                }
+            } 
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 - Álcool ou gasolina?</title>
+</head>
+<body>
+    <script>
+        let nomeUser = prompt("Digite seu nome:");
+
+        let alcoolWayne = parseFloat(prompt("Qual o valor do álcool no posto Wayne Oil?"));
+        let gasolinaWayne = parseFloat(prompt("Qual o valor da gasolina no posto Wayne Oil?"));
+
+        let alcoolStark = parseFloat(prompt("Qual o valor do álcool no posto Stark Petrol?"));
+        let gasolinaStark = parseFloat(prompt("Qual o valor da gasolina no posto Stark Petrol?"));
+
+        let melhorWayne;
+        if (alcoolWayne <= gasolinaWayne * 0.7) {
+            melhorWayne = alcoolWayne;
+        } else {
+            melhorWayne = gasolinaWayne;
+        }
+
+        let melhorStark;
+        if (alcoolStark <= gasolinaStark * 0.7) {
+            melhorStark = alcoolStark;
+        } else {
+            melhorStark = gasolinaStark;
+        }
+
+        let custoWayne = melhorWayne * 42;
+        let custoStark = melhorStark * 42;
+
+        if (custoWayne < custoStark) {
+
+            if (melhorWayne === alcoolWayne) {
+                alert(`${nomeUser}, é mais barato abastecer com álcool no posto Wayne Oil`);
+            } else {
+                alert(`${nomeUser}, é mais barato abastecer com gasolina no posto Wayne Oil`);
+            }
+
+        } else {
+
+            if (melhorStark === alcoolStark) {
+                alert(`${nomeUser}, é mais barato abastecer com álcool no posto Stark Petrol`);
+            } else {
+                alert(`${nomeUser}, é mais barato abastecer com gasolina no posto Stark Petrol`);
+            }
+
+        }
+    </script>
+</body>
+</html>
