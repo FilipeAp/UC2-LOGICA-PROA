@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números maiores que 8</title>
+</head>
+<body>
+    <h1>Questão:</h1>
+    <h2>
+        Escreva um programa que leia 20 números do usuário e exiba quantos números são maiores do que 8. 
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let maiores = 0
+
+        for (let i = 1; i <= 20; i++) {
+            let numero = parseFloat(prompt(`Digite o ${i}° número:`))
+            if(numero > 8){
+                maiores = maiores +1
+            }
+        }
+        
+        document.write(`A quantidade de números maiores que 8 é: ${maiores}`)
+
+        
+        
+    </script>
+
+</body>
+</html>

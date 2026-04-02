@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor dolar pra real</title>
+</head>
+<body>
+    <h1>Questão:</h1>
+    <h2>
+        Elaborar um programa que efetue a apresentação do valor da conversão em real (R$) de um valor lido em dólar (US$). O programa deverá solicitar o valor da cotação do dólar e também a quantidade de dólares disponíveis com o usuário.
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        
+        let cotacaoDolar = parseFloat(prompt("Digite o valor da cotação do dólar:"))
+        let dolars = parseFloat(prompt("Digite o valor a ser convertido de dólar para real:"))
+
+        if(isNaN(cotacaoDolar) || isNaN(dolars)){
+            document.write("A cotação ou a quantia monetária está incorreta, reinicie o programa e tente novamente")
+        }else{
+        document.write(`US$ ${dolars.toFixed(2)} na cotação informada é equivalente a R$ ${(dolars*cotacaoDolar).toFixed(2)}`)
+        }
+    </script>
+
+</body>
+</html>

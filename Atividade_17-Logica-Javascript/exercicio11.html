@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de salário do vendedor</title>
+</head>
+<body>
+    <h1>Questão:</h1>
+    <h2>
+        Escrever um programa que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o seu nome, o salário fixo e salário no final do mês. 
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+
+        let nome = prompt("Informe o nome do vendedor:")
+        let salarioFixo = parseFloat(prompt("Informe o salário fixo desse vendedor:"))
+        let valorVendas = parseFloat(prompt("Informe o valor total realizado em vendas por esse vendedor:"))
+
+        let comissao = valorVendas * 0.15
+        let salarioTotal = salarioFixo + comissao
+
+        document.write("Nome: " + nome)
+
+        if(isNaN(salarioFixo) || isNaN(valorVendas) || salarioFixo < 0 || valorVendas < 0){
+            alert("O salário fixo ou o valor total de vendas estão incorretos!\n Por favor corrija e tente novamente")
+        }else{
+        document.write("<br />Salário Fixo: R$ " + salarioFixo.toFixed(2))
+        document.write(`<br />Salário Total: R$ ${salarioFixo.toFixed(2)} + R$ ${comissao.toFixed(2)} = R$ ${salarioTotal.toFixed(2)}`)
+        }
+        
+    </script>
+
+</body>
+</html>

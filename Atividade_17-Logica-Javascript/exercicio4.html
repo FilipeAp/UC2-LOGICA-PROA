@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenador descendente</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2>
+        Dados três valores A, B e C, construa um programa em Javascript, que mostre na tela os valores de forma descendente (do maior para o menor).
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+
+        let varA = parseFloat(prompt("Insira o primeiro valor para comparação:"))
+        let varB = parseFloat(prompt("Insira o segundo valor para comparação:"))
+        let varC = parseFloat(prompt("Insira o terceiro valor para comparação:"))
+
+        if (isNaN(varA) || isNaN(varB) || isNaN(varC)){
+            document.write("Um ou mais dos valor inseridos é invalido")
+        }else{
+            if (varA >= varB && varA >= varC){
+                document.write(varA + ", ")
+                if (varB >= varC){
+                    document.write(`${varB}, ${varC}`)
+                }else{
+                    document.write(`${varC}, ${varB}`)
+                }
+            }else if(varB > varA && varB >= varC){
+                document.write(varB + ", ")
+                if (varA >= varC){
+                    document.write(`${varA}, ${varC}`)
+                }else{
+                    document.write(`${varC}, ${varA}`)
+                }
+            }else{
+                document.write(varC + ", ")
+                if (varB >= varA){
+                    document.write(`${varB}, ${varA}`)
+                }else{
+                    document.write(`${varA}, ${varB}`)
+                }
+            }
+        }
+        /*Colocando só menor o problema é que quando o usuário digitar 2 valores iguais nosso código não vai contemplar*/
+      
+
+    </script>
+
+</body>
+</html>

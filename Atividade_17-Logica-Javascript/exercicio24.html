@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de uma sequência</title>
+</head>
+<body>
+    <h1>Questão:</h1>
+    <h2>
+        Escreva um programa que leia uma sequência de números do usuário e realize a soma desses números. Encerre a execução quando um número negativo for digitado.
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let soma = 0
+        numero = 0
+        while(numero >= 0){
+            soma = soma + numero
+            numero = parseFloat(prompt("Digite um número para somar.\nQuando terminar digite um número negativo"))
+        }
+        
+        document.write(`A soma de todos valores é: ${soma}`)
+        
+        
+        
+    </script>
+
+</body>
+</html>

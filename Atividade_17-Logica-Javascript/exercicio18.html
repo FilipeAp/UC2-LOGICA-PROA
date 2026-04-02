@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoa mais nova</title>
+</head>
+<body>
+    <h1>Questão:</h1>
+    <h2>
+        Escreva um programa que leia o nome e a idade de 10 pessoas e exiba o nome da pessoa mais nova. 
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        
+        let nome = prompt(`Digite o nome da 1° pessoa:`)
+        let idade = parseInt(prompt(`Digite a idade da 1° pessoa:`))
+        let menorIdade = idade
+        let nomeMenorIdade = nome
+
+        for (let i = 2; i <= 3; i++) {
+            let nome = prompt(`Digite o nome da ${i}° pessoa:`)
+            let idade = parseInt(prompt(`Digite a idade da ${i}° pessoa:`))
+
+            if(idade < menorIdade){
+                nomeMenorIdade = nome
+                menorIdade = idade
+                condicao = 0
+            }else if(idade === menorIdade){
+                nomeMenorIdade = nomeMenorIdade + ", " + nome
+                condicao = 1
+            }
+        }
+        if(condicao === 0){
+            document.write(`A pessoa mais nova é: ${nomeMenorIdade}`)
+        }else{
+            document.write(`As pessoas mais novas são: ${nomeMenorIdade}`)
+        }
+        
+
+        
+        
+    </script>
+
+</body>
+</html>

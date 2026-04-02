@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de 10 números</title>
+</head>
+<body>
+    <h1>Questão:</h1>
+    <h2>
+        Escreva um programa  que leia 10 números do usuário e calcule a soma desses números. 
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+
+        let N1 = parseFloat(prompt("Digite o primeiro número:"))
+        let N2 = parseFloat(prompt("Digite o segundo número:"))
+        let N3 = parseFloat(prompt("Digite o terceiro número:"))
+        let N4 = parseFloat(prompt("Digite o quarto número:"))
+        let N5 = parseFloat(prompt("Digite o quinto número:"))
+        let N6 = parseFloat(prompt("Digite o sexto número:"))
+        let N7 = parseFloat(prompt("Digite o sétimo número:"))
+        let N8 = parseFloat(prompt("Digite o oitavo número:"))
+        let N9 = parseFloat(prompt("Digite o nono número:"))
+        let N10 = parseFloat(prompt("Digite o décimo número:"))
+
+        let somatoria = N1 + N2 + N3 + N4 + N5 + N6 + N7 + N8 + N9 + N10
+
+        if(isNaN(somatoria)){
+            alert("Algum dos números é inválido")
+            document.write("Algum dos números é inválido, reinicie o programa e tente novamente")
+        }else{
+            document.write("A soma desses números é: " + somatoria)
+        }
+        
+    </script>
+
+</body>
+</html>
