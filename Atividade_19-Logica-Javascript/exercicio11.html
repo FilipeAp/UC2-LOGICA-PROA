@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números entre 24 e 42</title>
+</head>
+<body>
+
+    <h1>Questão:</h1>
+    <h2> 
+        Escreva um programa em que o usuário informe 10 valores e escreva quantos desses valores lidos estão entre os números 24 e 42 (incluindo os valores 24 e 42) e quantos deles estão fora deste intervalo.
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let numero = 0;
+        let contadora = 0;
+
+        for(let i = 1; i <=10; i++){
+            numero = parseFloat(prompt(`Você deve insirir 10 valores, insira o ${i}° valor:`))
+            if(numero >= 24 && numero <= 42){
+                contadora = contadora + 1;
+            }
+        }
+        document.write(`${contadora} desses valores estão entre 24(inclusive) e 42(inclusive), e ${10 - contadora} desses valores estão fora desse intervalo.`)
+        
+    </script>
+</body>
+</html>

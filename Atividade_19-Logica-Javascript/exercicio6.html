@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media de duas notas</title>
+</head>
+<body>
+    <h1>Questão:</h1>
+    <h2> 
+        Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
+    </h2>
+    <h1>Programa:</h1>
+    <script>
+        let sentinela = "S";
+        let nota1 = 0;
+        let nota2 = 0;
+        let aprovados = 0;
+        let media = 0;
+
+        while(sentinela === "S"){
+            nota1 = parseInt(prompt("Digite a primeira nota do aluno:"))
+            nota2 = parseInt(prompt("Digite a segunda nota do aluno:"))
+
+            media = (nota1 + nota2) /2
+
+            if (media >= 9.5){
+                aprovados = aprovados + 1;
+            }
+
+            sentinela = prompt("Calcular a média de outro aluno S/N?")
+        }
+        
+        alert(`${aprovados} aluno(s) aprovado(s)`)
+        
+    </script>
+</body>
+</html>

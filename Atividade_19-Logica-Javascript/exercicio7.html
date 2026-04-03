@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media de 6 notas</title>
+</head>
+<body>
+
+    <h1>Questão:</h1>
+    <h2> 
+        Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total. Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário. 
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let nota = 0;
+        let media = 0;
+
+        for(let i = 1; i <= 6; i++){
+            nota = parseFloat(prompt(`Insira a ${i}° nota do aluno:`))
+            while(isNaN(nota) || nota > 10 || nota < 0){
+                nota = parseFloat(prompt(`${i}° nota invalida, por favor insira uma nota entre 0 e 10:`))
+            }
+            
+            media = media + nota;
+        }
+        media = media/6
+        alert(`A nota média do aluno é: ${media.toFixed(1)}`)
+        
+    </script>
+</body>
+</html>

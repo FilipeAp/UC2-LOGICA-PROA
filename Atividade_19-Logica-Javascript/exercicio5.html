@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média aritmética de dois números</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2> 
+        Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let numero1 = parseInt(prompt("Insira o primeiro número inteiro:"))
+        let numero2 = parseInt(prompt("Insira o segundo número inteiro:"))
+
+        while(numero1 >= numero2){
+            numero2 = parseInt(prompt(`O segundo número precisa ser maior que o primeiro(${numero1}) que você inseriu\nInsira um novo valor para o segundo número inteiro:`))
+        }
+
+        document.write(`A média aritmética de ${numero1} e ${numero2} é: ${(numero1+numero2)/2}`)
+        
+        let contadora = 0
+        let soma = 0
+        for(let i = numero1; i <=numero2; i++){
+            soma = soma + i;
+            contadora++
+        }
+        let media = soma/contadora
+        document.write(`<br />A média aritmética dos números inteiros entre ${numero1} e ${numero2} é: ${media}`)
+
+
+    </script>
+
+</body>
+</html>
