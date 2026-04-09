@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada de X</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2> 
+        Escreva um programa que leia um número inteiro e exiba a tabuada desse número até o décimo valor.
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let multiplicado = parseInt(prompt("Insira um número para criar tabuada:"))
+
+        for(let multiplicador = 1; multiplicador <= 10; multiplicador++){
+            document.write(`${multiplicador} x ${multiplicado} = ${multiplicador * multiplicado} <br />`)
+        }
+    </script>
+    
+</body>
+</html>

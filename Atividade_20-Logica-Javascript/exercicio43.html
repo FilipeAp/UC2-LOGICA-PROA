@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dígitos de X</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2> 
+        Faça um programa que leia um número inteiro e exiba os seus dígitos separadamente.
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let numero = parseInt(prompt("Digite um número para separá-lo:"));
+        let transformString = numero.toString();
+
+        for(let i = 0; i < transformString.length; i++){
+            document.write(transformString[i] + "<br>")
+        }
+    </script>
+    
+</body>
+</html>

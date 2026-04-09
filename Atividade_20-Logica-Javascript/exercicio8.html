@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci até X</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2> 
+        Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "while".
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let numero = parseInt(prompt("Insira um número para conferir a sequência de Fibonacci  até ele:"))
+        let cont = 1;
+        let contatrasado = 0;
+        let prox = 0 
+        
+        document.write(`${0} <br />`)
+        while(cont <= numero){
+            document.write(`${cont} <br />`) 
+            prox = cont + contatrasado
+            contatrasado = cont;
+            cont = prox;
+        }
+        
+    </script>
+    
+</body>
+</html>

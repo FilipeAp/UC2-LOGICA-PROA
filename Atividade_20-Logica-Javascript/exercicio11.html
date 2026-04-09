@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de todos números pares entre 1 e X</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2> 
+        Escreva um programa que leia um número inteiro e exiba a soma de todos os números pares entre 1 e o número lido usando o loop "while".
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let numero = parseInt(prompt("Insira um números para consutar a soma de todos os números pares entre 1 e ele:"));
+        let i = 1;
+        let total = 0;
+
+        while(i <= numero){
+            if((i % 2) === 0){
+                total = total + i;
+            }
+            i++;
+        }
+        document.write(`A soma dos números pares entre 1 e ${numero} é: ${total}`)
+        
+    </script>
+    
+</body>
+</html>

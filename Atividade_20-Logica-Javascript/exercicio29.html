@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial de X</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2> 
+        Escreva um programa que calcule o fatorial de um número inteiro inserido pelo usuário usando o loop "do-while".
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let numero = parseInt(prompt("Insira um número para calcular o fatorial:"))
+        let i = 1;
+        let fatorial = 1;
+
+        do {
+            fatorial = fatorial * i;
+            i++;
+        } while(i <= numero)
+
+        document.write(`O fatorial de ${numero} é:<br /> ${fatorial}`)
+        
+    </script>
+    
+</body>
+</html>

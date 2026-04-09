@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de 5 valores</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2> 
+        Faça um programa que leia 5 números inteiros e exiba a média aritmética dos valores lidos.
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let media = 0;
+        for(let i = 1; i <= 5; i++){
+            let num = parseInt(prompt(`Insira o ${i}° número:`))
+            media = media + num;
+        }
+        media = media / 5;
+        document.write(`A média dos 5 valores inseridos é:<br /> ${media}`)
+    </script>
+    
+</body>
+</html>

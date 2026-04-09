@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros 20 Fibonacci</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2> 
+        Faça um programa que exiba os primeiros 20 números da sequência de Fibonacci.
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let atual = 1;
+        let anterior = 0;
+        let prox = 0;
+
+        document.write(0 + "<br />")
+
+        for(let cont = 1; cont <= 19; cont++){
+            document.write(atual + "<br />")
+            prox = atual + anterior;
+            anterior = atual;
+            atual = prox;
+        }
+    </script>
+    
+</body>
+</html>

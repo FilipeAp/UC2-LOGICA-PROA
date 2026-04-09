@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisores de X</title>
+</head>
+<body>
+    
+    <h1>Questão:</h1>
+    <h2> 
+        Crie um programa que leia um número inteiro positivo e exiba todos os divisores desse número.
+    </h2>
+    <h1>Programa:</h1>
+
+    <script>
+        let numero = parseInt(prompt("Insira um número para conferir os divisores:"))
+        document.write(`O número ${numero} é divisível por: <br />`)
+        for(let divisor = 1; divisor <= numero; divisor++){
+            if((numero % divisor) === 0)
+            document.write(`${divisor} <br />`)
+        }
+    </script>
+    
+</body>
+</html>
