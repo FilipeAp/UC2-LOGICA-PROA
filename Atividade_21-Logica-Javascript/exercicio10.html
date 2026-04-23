@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 10</title>
+</head>
+<body>
+  <h1>Questão 10:</h1>
+  <h2>Faça um programa que leia 5 números inteiros e verifique se algum deles é igual a zero.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const numero = [];
+    for (let i = 1; i <= 5; i++) {
+      numero.push(parseInt(prompt(`Digite o ${i}° número:`)));
+    }
+ 
+    let temZero = false;
+ 
+    numero.forEach(num => {
+      if (num === 0) {
+        temZero = true;
+      }
+    });
+ 
+    if (temZero) {
+      document.write(`Sim, há pelo menos um número igual a zero.`);
+    } else {
+      document.write(`Nenhum número digitado é igual a zero.`);
+    }
+  </script>
+</body>
+</html>

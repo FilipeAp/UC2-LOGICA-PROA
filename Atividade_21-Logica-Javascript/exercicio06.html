@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 6</title>
+</head>
+<body>
+
+  <h1>Questão:</h1>
+  <h2> Crie um programa que leia 10 números inteiros e exiba-os em ordem crescente.</h2>
+  <h1>Resolução:</h1>
+  <script>
+
+    const numero = [];
+
+    for (let i = 1; i <= 10; i++) {
+      numero.push(parseInt(prompt(`Digite o ${i}° número:`)));
+    }
+
+    const ordem = [];
+
+    numero.forEach(num => {
+      let inserido = false;
+
+      for (let i = 0; i < ordem.length; i++) {
+        if (num < ordem[i]) {
+          ordem.splice(i, 0, num);
+          inserido = true;
+          break;
+        }
+      }
+
+      if (!inserido) {
+        ordem.push(num);
+      }
+    });
+
+    ordem.forEach(n => {
+      document.write(`${n} `);
+    });
+  </script>
+
+</body>
+</html>

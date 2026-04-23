@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 26</title>
+</head>
+<body>
+  <h1>Questão 26:</h1>
+  <h2>Escreva um programa que leia duas matrizes 2x2 de números inteiros e verifique se elas são iguais.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const matrizA = [];
+    const matrizB = [];
+ 
+    for (let i = 0; i < 2; i++) {
+      matrizA.push([]);
+      for (let j = 0; j < 2; j++) {
+        matrizA[i].push(parseInt(prompt(`Matriz A - elemento [${i}][${j}]:`)));
+      }
+    }
+ 
+    for (let i = 0; i < 2; i++) {
+      matrizB.push([]);
+      for (let j = 0; j < 2; j++) {
+        matrizB[i].push(parseInt(prompt(`Matriz B - elemento [${i}][${j}]:`)));
+      }
+    }
+ 
+    let iguais = true;
+    for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < 2; j++) {
+        if (matrizA[i][j] !== matrizB[i][j]) {
+          iguais = false;
+        }
+      }
+    }
+ 
+    if (iguais) {
+      document.write(`As matrizes são iguais.`);
+    } else {
+      document.write(`As matrizes não são iguais.`);
+    }
+  </script>
+</body>
+</html>

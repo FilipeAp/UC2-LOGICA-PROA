@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 8</title>
+</head>
+<body>
+  <h1>Questão 08:</h1>
+  <h2>Escreva um programa que leia 5 números inteiros e calcule a média dos valores pares e a média dos valores ímpares.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const numero = [];
+    for (let i = 1; i <= 5; i++) {
+      numero.push(parseInt(prompt(`Digite o ${i}° número:`)));
+    }
+ 
+    const pares = [];
+    const impares = [];
+ 
+    numero.forEach(num => {
+      if (num % 2 === 0) {
+        pares.push(num);
+      } else {
+        impares.push(num);
+      }
+    });
+ 
+    let mediaPares = 0;
+    let mediaImpares = 0;
+ 
+    if (pares.length > 0) {
+      let somaPares = 0;
+      pares.forEach(n => { somaPares += n; });
+      mediaPares = somaPares / pares.length;
+      document.write(`Média dos pares: ${mediaPares}<br>`);
+    } else {
+      document.write(`Nenhum número par foi digitado.<br>`);
+    }
+ 
+    if (impares.length > 0) {
+      let somaImpares = 0;
+      impares.forEach(n => { somaImpares += n; });
+      mediaImpares = somaImpares / impares.length;
+      document.write(`Média dos ímpares: ${mediaImpares}<br>`);
+    } else {
+      document.write(`Nenhum número ímpar foi digitado.<br>`);
+    }
+  </script>
+</body>
+</html>

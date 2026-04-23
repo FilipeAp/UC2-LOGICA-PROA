@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 17</title>
+</head>
+<body>
+  <h1>Questão 17:</h1>
+  <h2>Escreva um programa que leia uma matriz 2x2 de números inteiros e calcule a soma de todos os elementos.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const matriz = [];
+    for (let i = 0; i < 2; i++) {
+      matriz.push([]);
+      for (let j = 0; j < 2; j++) {
+        matriz[i].push(parseInt(prompt(`Digite o elemento [${i}][${j}]:`)));
+      }
+    }
+ 
+    let soma = 0;
+    for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < 2; j++) {
+        soma += matriz[i][j];
+      }
+    }
+ 
+    document.write(`A soma de todos os elementos da matriz é: ${soma}`);
+  </script>
+</body>
+</html>

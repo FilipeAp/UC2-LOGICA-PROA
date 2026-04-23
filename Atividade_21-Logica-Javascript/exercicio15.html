@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 15</title>
+</head>
+<body>
+  <h1>Questão 15:</h1>
+  <h2>Crie um programa que leia 5 nomes e exiba-os em ordem alfabética.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const nomes = [];
+    for (let i = 1; i <= 5; i++) {
+      nomes.push(prompt(`Digite o ${i}° nome:`));
+    }
+ 
+    const ordem = [];
+ 
+    nomes.forEach(nome => {
+      let inserido = false;
+      for (let i = 0; i < ordem.length; i++) {
+        if (nome.toLowerCase() < ordem[i].toLowerCase()) {
+          ordem.splice(i, 0, nome);
+          inserido = true;
+          break;
+        }
+      }
+      if (!inserido) {
+        ordem.push(nome);
+      }
+    });
+ 
+    document.write(`Nomes em ordem alfabética: `);
+    ordem.forEach(n => {
+      document.write(`${n} `);
+    });
+  </script>
+</body>
+</html>

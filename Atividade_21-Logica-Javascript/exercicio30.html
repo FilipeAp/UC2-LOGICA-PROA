@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 30</title>
+</head>
+<body>
+  <h1>Questão 30:</h1>
+  <h2>Crie um programa que leia duas matrizes 2x2 de números inteiros e exiba a subtração.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const matrizA = [];
+    const matrizB = [];
+ 
+    for (let i = 0; i < 2; i++) {
+      matrizA.push([]);
+      for (let j = 0; j < 2; j++) {
+        matrizA[i].push(parseInt(prompt(`Matriz A - elemento [${i}][${j}]:`)));
+      }
+    }
+ 
+    for (let i = 0; i < 2; i++) {
+      matrizB.push([]);
+      for (let j = 0; j < 2; j++) {
+        matrizB[i].push(parseInt(prompt(`Matriz B - elemento [${i}][${j}]:`)));
+      }
+    }
+ 
+    document.write(`Subtração das matrizes A - B:<br>`);
+    for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < 2; j++) {
+        document.write(`${matrizA[i][j] - matrizB[i][j]} `);
+      }
+      document.write(`<br>`);
+    }
+  </script>
+</body>
+ 
+</html>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 16</title>
+</head>
+<body>
+
+<script>
+
+</script>
+
+</body><body>
+  <h1>Questão 16:</h1>
+  <h2>Faça um programa que leia uma matriz 3x3 de números inteiros e exiba a matriz na tela.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const matriz = [];
+    for (let i = 0; i < 3; i++) {
+      matriz.push([]);
+      for (let j = 0; j < 3; j++) {
+        matriz[i].push(parseInt(prompt(`Digite o elemento [${i}][${j}]:`)));
+      }
+    }
+ 
+    document.write(`Matriz 3x3:<br>`);
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        document.write(`${matriz[i][j]} `);
+      }
+      document.write(`<br>`);
+    }
+  </script>
+</body>
+</html>

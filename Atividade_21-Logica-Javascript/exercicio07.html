@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 7</title>
+</head>
+<body>
+  <h1>Questão:</h1>
+  <h2> Faça um programa que leia 10 números inteiros e exiba quantos deles são positivos.</h2>
+  <h1>Resolução:</h1>
+<script>
+  const numeros = []
+  let positivos = 0;
+  for(let i = 1; i <=10; i++){
+    numeros.push(parseInt(prompt(`Insira ${i}/10 números para verificar os positivos`)))
+  }
+
+  numeros.forEach(numero => {
+    if(numero > 0){
+      positivos += 1;
+    }
+  })
+  document.write("Foram digitados " + positivos + " números positivos")
+
+</script>
+
+</body>
+</html>

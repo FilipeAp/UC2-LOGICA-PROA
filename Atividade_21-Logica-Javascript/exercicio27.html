@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 27</title>
+</head>
+<body>
+  <h1>Questão 27:</h1>
+  <h2>Crie um programa que leia uma matriz 3x3 de números inteiros e exiba o produto dos elementos da diagonal secundária.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const matriz = [];
+    for (let i = 0; i < 3; i++) {
+      matriz.push([]);
+      for (let j = 0; j < 3; j++) {
+        matriz[i].push(parseInt(prompt(`Digite o elemento [${i}][${j}]:`)));
+      }
+    }
+ 
+    let produto = 1;
+    for (let i = 0; i < 3; i++) {
+      produto *= matriz[i][2 - i];
+    }
+ 
+    document.write(`O produto dos elementos da diagonal secundária é: ${produto}`);
+  </script>
+</body>
+ 
+</html>

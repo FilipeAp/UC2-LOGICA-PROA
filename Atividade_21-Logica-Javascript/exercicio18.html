@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 18</title>
+</head>
+<body>
+  <h1>Questão 18:</h1>
+  <h2>Crie um programa que leia uma matriz 3x3 de números inteiros e exiba a soma dos elementos da diagonal principal.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const matriz = [];
+    for (let i = 0; i < 3; i++) {
+      matriz.push([]);
+      for (let j = 0; j < 3; j++) {
+        matriz[i].push(parseInt(prompt(`Digite o elemento [${i}][${j}]:`)));
+      }
+    }
+ 
+    let somaDiagonal = 0;
+    for (let i = 0; i < 3; i++) {
+      somaDiagonal += matriz[i][i];
+    }
+ 
+    document.write(`A soma da diagonal principal é: ${somaDiagonal}`);
+  </script>
+</body>
+ 
+</html>

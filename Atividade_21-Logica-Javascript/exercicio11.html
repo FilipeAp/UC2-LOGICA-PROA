@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 11</title>
+</head>
+<body>
+  <h1>Questão 11:</h1>
+  <h2>Escreva um programa que leia 10 números inteiros e exiba a soma dos valores positivos e a soma dos valores negativos.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    const numero = [];
+    for (let i = 1; i <= 10; i++) {
+      numero.push(parseInt(prompt(`Digite o ${i}° número:`)));
+    }
+ 
+    let somaPositivos = 0;
+    let somaNegativos = 0;
+ 
+    numero.forEach(num => {
+      if (num > 0) {
+        somaPositivos += num;
+      } else if (num < 0) {
+        somaNegativos += num;
+      }
+    });
+ 
+    document.write(`Soma dos positivos: ${somaPositivos}<br>`);
+    document.write(`Soma dos negativos: ${somaNegativos}<br>`);
+  </script>
+</body>
+</html>

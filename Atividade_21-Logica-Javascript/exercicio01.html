@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <h1>Questão:</h1>
+    <h2>Faça um programa que leia 5 números inteiros e exiba-os na ordem inversa em que foram digitados.</h2>
+    <h1>Resolução:</h1>
+    <script>
+        const num = []
+        for (let i = 1; i <= 5; i++) {
+            num.push(parseInt(prompt(`Digite o ${i}º número:`)))
+        }
+        for (let i = 4; i >= 0; i--) {
+            document.write(`${num[i]} `);
+        }
+    </script>
+</body>
+</html>

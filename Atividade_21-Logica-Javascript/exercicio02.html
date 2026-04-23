@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 2</title>
+</head>
+<body>
+  <h1>Questão:</h1>
+  <h2> Escreva um programa que leia 10 números inteiros e exiba a soma deles.</h2>
+  <h1>Resolução:</h1>
+  <script>
+    let total = 0;
+    const numero = [];
+    for(let i = 1; i <= 10; i++){
+      numero.push(parseInt(prompt(`Digite o ${i}° número:`)))
+    }
+    numero.forEach(num => {total = total + num})
+    document.write(total)
+  </script>
+
+</body>
+</html>
